@@ -1,0 +1,48 @@
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../node_modules\bootstrap\dist\css\bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/MySteel.css" />
+<title>New Produit</title>
+</head>
+<div class="container spacer">
+<div class="panel panel-default" ng-if="mode==0">
+<div class="panel-heading">Saisie d'un Produit</div>
+<div class="panel-body">
+<form>
+<div class="form-group">
+<label class="control-label">Désignation:</label>
+<input class="form-control" type="text" ng-model="produit.designation">
+</div>
+<div class="form-group">
+<label class="control-label">Prix:</label>
+<input class="form-control" type="text" ng-model="produit.prix">
+</div>
+<div class="form-group">
+<label class="control-label">Quantité:</label>
+<input class="form-control" type="text" ng-model="produit.quantite">
+</div>
+<div class="btn btn-primary" ng-click="saveProduit()">Ajouter</div>
+</form>
+</div>
+</div>
+
+
+<div class="panel panel-default" ng-if="mode==1">
+<div class="panel-heading">Confirmation :<a href="#" ng-click="modeForm()">New</a></div>
+<div class="panel-body">
+<div class="form-group">
+<label>ID:</label><label>{{produit.id}}</label>
+</div>
+<div class="form-group">
+<label>Designation:</label><label>{{produit.designation}}</label>
+</div>
+<div class="form-group">
+<label>Prix:</label><label>{{produit.prix}}</label>
+</div>
+<div class="form-group">
+<label>Quantité:</label><label>{{produit.quantite}}</label>
+</div>
+
+</div>
+</div>
+</div>
